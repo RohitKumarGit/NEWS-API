@@ -7,27 +7,5 @@ new Vue({
         tags:["US NEWS","BBC NEWS","TRUMP NEWS","GERMANY NEWS"],
         idx:0,
     },
-    methods:{
-        change:async function(){
-           const p = this;
-           
-            p.n+=1;
-            
-            
-        }
-    },
-    created(){
-        this.n=0;
-    },
-    watch :{
-        n : async function(val){
-            const p = this;
-            this.idx = val % p.newsURL.length;
-            const res =await axios.get(p.newsURL[this.idx]);
-            console.log(res.data)
-            this.news = res.data
-           
-            
-        }
-    }
+    
 })

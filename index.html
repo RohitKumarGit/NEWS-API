@@ -11,23 +11,7 @@
 </head>
 
 <body>
-    <div id="app">
-        <div class="box">
-            <button type="button" v-on:click="change" style="position: absolute; right: 180px;top: 4px;"
-                class=" ml-auto btn btn-outline-primary">Change</button>
-        </div>
-        <div class="cont">
-            <div class="news_cont shadow">
-                <div class="tag">
-                    {{tags[idx]}}
-                </div>
-                <div class="news_box " v-for="news in news.articles"
-                    v-bind:style="'background:url('+news.urlToImage+')'">
-
-                </div>
-            </div>
-        </div>
-    </div>
+    
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
