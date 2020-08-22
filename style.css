@@ -1,0 +1,30 @@
+.cont{
+    height: 95vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.news_cont{
+    flex-basis: 70rem;
+  
+    display: flex;
+    justify-content:space-evenly;
+    flex-wrap: wrap;
+    align-items: stretch;
+    padding:3rem;
+}
+.news_box{
+  
+  height: 100px;
+  flex-grow: 1;
+  flex-basis: 15%;
+    background-color: red;
+    margin: 1rem;
+   background-size: cover !important;
+    background-position:center !important;
+    cursor: pointer;
+    transition: all .3s ease-out;
+}
+.news_box:hover{
+   transform: scale(1.07);
+}
