@@ -3,7 +3,9 @@ new Vue({
     data:{
         n:-1,
         newsURL:["https://newsapi.org/v2/top-headlines?country=us&apiKey=921c834598874e29956fdc23d1ececbc","https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=921c834598874e29956fdc23d1ececbc","https://newsapi.org/v2/top-headlines?q=trump&apiKey=921c834598874e29956fdc23d1ececbc","https://newsapi.org/v2/top-headlines?country=de&category=business&apiKey=921c834598874e29956fdc23d1ececbc"],
-        news:""
+        news:"",
+        tags:["US NEWS","BBC NEWS","TRUMP NEWS","GERMANY NEWS"],
+        idx:0,
     },
     methods:{
         change:async function(){
@@ -20,7 +22,8 @@ new Vue({
     watch :{
         n : async function(val){
             const p = this;
-            const res =await axios.get(p.newsURL[val % p.newsURL.length]);
+            this.idx = val % p.newsURL.length;
+            const res =await axios.get(p.newsURL[this.idx]);
             console.log(res.data)
             this.news = res.data
            

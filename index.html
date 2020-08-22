@@ -18,6 +18,9 @@
         </div>
         <div class="cont">
             <div class="news_cont shadow">
+                <div class="tag">
+                    {{tags[idx]}}
+                </div>
                 <div class="news_box " v-for="news in news.articles"
                     v-bind:style="'background:url('+news.urlToImage+')'">
 

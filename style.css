@@ -4,9 +4,20 @@
     justify-content: center;
     align-items: center;
 }
+.tag{
+    position: absolute;
+    left:30px;
+    top:-20px;
+    display: inline-block;
+    padding:.3rem .6rem;
+    background: #eeee;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: .3rem;
+}
 .news_cont{
     flex-basis: 70rem;
-  
+  position: relative;
     display: flex;
     justify-content:space-evenly;
     flex-wrap: wrap;
